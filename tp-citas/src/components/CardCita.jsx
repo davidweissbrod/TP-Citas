@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap'
 
-function CardCita (registro) {
+const CardCita = ({ registro, onDelete }) => {
   return (
     <Card className="mb-4">
       <Card.Body>
@@ -12,6 +13,7 @@ function CardCita (registro) {
           <strong>Hora:</strong> {registro.hora}<br />
           <strong>Síntomas:</strong> {registro.sintomas}
         </Card.Text>
+        <Button variant="danger" onClick={onDelete}>Borrar</Button>
       </Card.Body>
     </Card>
   );

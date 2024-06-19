@@ -8,9 +8,10 @@ const Formulario = ({ añadirRegistro }) => {
   const [hora, setHora] = useState('');
   const [sintomas, setSintomas] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    añadirRegistro({ mascota, dueño, fecha, hora, sintomas });
+  const handleSubmit = () => {
+    const nuevoRegistro = { mascota, dueño, fecha, hora, sintomas };
+    console.log('Nuevo Registro:', nuevoRegistro);
+    añadirRegistro(nuevoRegistro);
     setMascota('');
     setDueño('');
     setFecha('');
@@ -19,7 +20,7 @@ const Formulario = ({ añadirRegistro }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="mb-4">
+    <Form onSubmit={handleSubmit}>
       <Form.Group controlId="formMascota">
         <Form.Label>Mascota</Form.Label>
         <Form.Control
@@ -64,6 +65,7 @@ const Formulario = ({ añadirRegistro }) => {
           onChange={(e) => setSintomas(e.target.value)}
         />
       </Form.Group>
+      <br />
       <Button variant="primary" type="submit">
         Añadir Cita
       </Button>

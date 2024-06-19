@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from './components/Form';
+import Formulario from './components/Form';
 import Listado from './components/Listado';
 import './App.css';
 
 const App = () => {
   const [registros, setRegistros] = useState([]);
 
-  function añadirRegistro(registro){
-    setRegistros([registros, registro]);
+  const añadirRegistro = (registro) => {
+    setRegistros([...registros, registro]);
+  };
+  const eliminarRegistro = (index) => {
+    const nuevosRegistros = [...registros];
+    nuevosRegistros.splice(index, 1);
+    setRegistros(nuevosRegistros);
   };
 
   return (
     <div className="App">
-      <h1>Registro de Mascotas</h1>
-      <Form añadirRegistro={añadirRegistro} />
-      <Listado registros={registros} />
+      <h1>Gestor de Citas Mascotas</h1>
+      <Formulario añadirRegistro={añadirRegistro} />
+      <Listado registros={registros} eliminarRegistro={eliminarRegistro}/>
     </div>
   );
 }
 
 export default App;
+
 
