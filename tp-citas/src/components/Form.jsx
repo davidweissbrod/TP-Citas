@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import Boton from './Boton'
 
 const Formulario = ({ añadirRegistro }) => {
   const [mascota, setMascota] = useState('');
@@ -8,7 +9,8 @@ const Formulario = ({ añadirRegistro }) => {
   const [hora, setHora] = useState('');
   const [sintomas, setSintomas] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const nuevoRegistro = { mascota, dueño, fecha, hora, sintomas };
     console.log('Nuevo Registro:', nuevoRegistro);
     añadirRegistro(nuevoRegistro);
@@ -66,9 +68,7 @@ const Formulario = ({ añadirRegistro }) => {
         />
       </Form.Group>
       <br />
-      <Button variant="primary" type="submit">
-        Añadir Cita
-      </Button>
+      <Boton variant="primary" texto = "Añadir Cita" type="submit"></Boton>
     </Form>
   );
 };

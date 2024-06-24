@@ -17,10 +17,16 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div class = "container">
       <h1>Gestor de Citas Mascotas</h1>
-      <Formulario añadirRegistro={añadirRegistro} />
-      <Listado registros={registros} eliminarRegistro={eliminarRegistro}/>
+      <div class = "formulario">
+        <Formulario añadirRegistro={añadirRegistro} />
+      </div>
+      <br/>
+      <div class = "cards">
+        <Listado registros={registros} eliminarRegistro={eliminarRegistro}/> 
+      </div>
+
     </div>
   );
 }
