@@ -67,7 +67,7 @@ const Formulario = ({ añadirRegistro }) => {
         />
       </Form.Group>
       <br />
-      <Boton variant="primary" texto = "Añadir Cita" type="submit"></Boton>
+      <button variant="danger" type="submit">Añadir Cita</button>
     </Form>
   );
 };

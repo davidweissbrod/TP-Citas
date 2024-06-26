@@ -26,7 +26,6 @@ const App = () => {
       <div class = "cards">
         <Listado registros={registros} eliminarRegistro={eliminarRegistro}/> 
       </div>
-
     </div>
   );
 }

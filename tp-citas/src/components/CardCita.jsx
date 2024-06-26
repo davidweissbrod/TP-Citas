@@ -14,7 +14,7 @@ const CardCita = ({ registro, onDelete }) => {
           <strong>Hora:</strong> {registro.hora}<br/>
           <strong>Síntomas:</strong> {registro.sintomas}<br/>
         </Card.Text>
-        <Boton color = "danger" texto = "Borrar" onClick = {onDelete}></Boton>
+        <Boton color={registro.color} texto='Borrar' onClick={onDelete}/>
       </Card.Body>
     </Card>
     <br/>
