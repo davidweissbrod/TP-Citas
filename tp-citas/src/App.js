@@ -18,7 +18,9 @@ const App = () => {
 
   return (
     <div class = "container">
-      <h1>Gestor de Citas Mascotas</h1>
+      <div class="titulo">
+        <h1>Gestor de Citas Mascotas</h1>
+      </div>
       <div class = "formulario">
         <Formulario añadirRegistro={añadirRegistro} />
       </div>

@@ -19,7 +19,6 @@ const Formulario = ({ añadirRegistro }) => {
     setHora('');
     setSintomas('');
   };
-
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId="formMascota">
@@ -67,7 +66,7 @@ const Formulario = ({ añadirRegistro }) => {
         />
       </Form.Group>
       <br />
-      <button variant="danger" type="submit">Añadir Cita</button>
+      <Boton color="primary" type="submit">Añadir Cita</Boton>
     </Form>
   );
 };
