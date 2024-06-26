@@ -12,7 +12,6 @@ const Formulario = ({ añadirRegistro }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const nuevoRegistro = { mascota, dueño, fecha, hora, sintomas };
-    console.log('Nuevo Registro:', nuevoRegistro);
     añadirRegistro(nuevoRegistro);
     setMascota('');
     setDueño('');
