@@ -21,12 +21,15 @@ const App = () => {
       <div class="titulo">
         <h1>Gestor de Citas Mascotas</h1>
       </div>
-      <div class = "formulario">
-        <Formulario añadirRegistro={añadirRegistro} />
-      </div>
-      <br/>
-      <div class = "cards">
-        <Listado registros={registros} eliminarRegistro={eliminarRegistro}/> 
+      <div class = "contenido">
+        <div class = "formulario">
+          <Formulario añadirRegistro={añadirRegistro} />
+        </div>
+        <br/>
+          <h1>Citas</h1>
+        <div class = "cards">
+          <Listado registros={registros} eliminarRegistro={eliminarRegistro}/> 
+        </div>
       </div>
     </div>
   );
